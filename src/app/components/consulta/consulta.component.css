@@ -1,0 +1,14 @@
+.consulta-ctn {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid slategray;
+}
+
+.boton {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+h5 {
+  border-bottom: 1px solid slategray;
+}

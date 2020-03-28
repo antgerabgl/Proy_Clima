@@ -1,0 +1,62 @@
+<button
+  type="button"
+  class="btn btn-primary"
+  data-toggle="modal"
+  data-target="#exampleModal"
+  (click)="cleanModal()"
+>
+  Agregar Clima
+</button>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  data-backdrop="static"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Agregar Climas</h3>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="col-form-label"> Pais: </label>
+          <input type="text" class="form-control" [(ngModel)]="pais" />
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Ciudad:</label>
+          <input type="text" class="form-control" [(ngModel)]="ciudad" />
+        </div>
+        <div class="form-group">
+          <label class="col-form-label">Grados:</label>
+          <input type="text" class="form-control" [(ngModel)]="grados" />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Cerrar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="modalClimas()"
+          data-dismiss="modal"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

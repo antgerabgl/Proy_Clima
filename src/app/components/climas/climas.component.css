@@ -1,0 +1,22 @@
+.climas-ctn {
+  height: 500px;
+  width: 400px;
+  border: 1px solid slategray;
+  margin-left: 21px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.formulario-ctn {
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+
+h5 {
+  margin: 0px;
+  border-bottom: 2px solid slategray;
+  margin-bottom: 10px;
+  font-size: 30px;
+  text-align: center;
+}

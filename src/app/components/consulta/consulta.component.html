@@ -1,0 +1,47 @@
+<div class="consulta-ctn">
+  <h5 class="card-header">CONSULTAR CLIMA</h5>
+  <div class="card-body">
+    <div class="card-text">
+      <label>Pais</label>
+      <input class="form-control" type="text" [(ngModel)]="pais" />
+    </div>
+
+    <div class="card-text">
+      <label>Ciudad</label>
+      <input class="form-control" type="text" [(ngModel)]="ciudad" />
+    </div>
+
+    <div class="dropdown">
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Climas
+      </button>
+
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+      </div>
+    </div>
+
+    <div class="boton">
+      <!-- data-target="#exampleModalCenter"  es el que abre el modal correspondiente-->
+      <div>
+        <button
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#exampleModalCenter"
+          (click)="realizarBusqueda()"
+        >
+          Buscar Clima
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

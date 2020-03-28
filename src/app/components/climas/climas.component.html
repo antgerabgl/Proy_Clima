@@ -1,0 +1,16 @@
+<div class="climas-ctn">
+  <h5>Tarjetas de climas</h5>
+  <div class="card-body">
+    <div *ngFor="let clima of climas; let i = index">
+      <app-clima
+        [index]="i"
+        [id]="clima._id"
+        [pais]="clima.pais"
+        [ciudad]="clima.ciudad"
+        [grados]="clima.grados"
+        (EditClima)="editClimaFunc($event)"
+        (borraTarjetaClima)="deleteClima($event)"
+      ></app-clima>
+    </div>
+  </div>
+</div>

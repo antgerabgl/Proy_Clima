@@ -1,0 +1,29 @@
+<!-- app.component.html -->
+<div class="global-ctn">
+  <div>
+    <app-consulta (ConsultaClima)="showUnClima($event)"></app-consulta>
+    <br />
+    <app-modal
+      [id]="id"
+      [pais]="pais"
+      [ciudad]="ciudad"
+      [grados]="grados"
+      (AlmacenaClima)="modalClimaSave($event)"
+    >
+    </app-modal>
+    <div class="form-group" *ngFor="let clim of climas2; let i = index">
+      <app-modal2
+        [pais]="clim.pais"
+        [ciudad]="clim.ciudad"
+        [grados]="clim.grados"
+      ></app-modal2>
+    </div>
+  </div>
+  <div class="col-6">
+    <app-climas
+      [climas]="climas"
+      (EditClima)="editClimaEvento($event)"
+      (borraTarjetaClima)="deleteClimaTarjeta($event)"
+    ></app-climas>
+  </div>
+</div>
